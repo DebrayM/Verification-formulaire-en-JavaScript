@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'identification avec vérifications</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" async></script>
+</head>
+<body>
+    <header>
+        <h1>Formulaire d'identification avec vérifications</h1>
+    </header> 
+    <form action="#" id="id-form">
+        <fieldset form="id-form" class="form-style">
+            <legend>Identification</legend>
+        <p id="p1">
+            <label for="pseudo" class="labelgray">Entrez votre pseudonyme</label>
+            <input type="text" name="pseudo" id="pseudo">
+            <p id="errorp1" class="err"></p>
+        </p>
+        <p id="p2">
+            <label for="email1" class="labelgray">Entrez votre adresse mail</label>
+            <input type="email" name="email1" id="email1" placeholder="martin.dupont@gmail.com">
+            <p id="errorp2" class="err"></p>
+        </p>
+        <p id="p3">
+            <label for="PassW" class="labelgray">Entrez votre mot de passe</label>
+            <input type="password" name="PassW" id="PassW" required>
+            <a href="#" id="img1"><img src="oeil.png" alt="oeil"></a>
+            <p id="errorp3" class="err"></p>
+        </p>
+        <p id="p4">
+            <label for="PassWc" class="labelgray">confirmer votre mot de passe</label>
+            <input type="password" name="PassWc" id="PassWc" required>
+            <a href="#" id="img2"><img src="oeil.png" alt="oeil"></a>
+            <p id="errorp4" class="err"></p>
+        </p>
+        </fieldset>
+    </form>
+    <footer>
+        <p>Tous droits réservés &copy; <span class="bold">ACS Auxerre 2021</span></p>
+    </footer>   
+</body>
+</html>
