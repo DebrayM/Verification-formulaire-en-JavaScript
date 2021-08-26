@@ -48,16 +48,24 @@ function checkEmail(email)
 }
 
 function verifEmail() {
-    console.log("email " + this.id + "  valeur  " + this.value);
+
+    let error = document.createElement('p');
+    error.classList.add('err'); // ajoute la classe CSS err pour l'affichage en rouge
+    error.style.display = "block";
+    error.innerText = "Votre adresse email est invalide";
 
     if (checkEmail(this.value)) {
         this.style.borderColor = "green";
-        document.getElementById('errorp2').innerHTML = "";
+        if (!this.nextSibling.length) {
+            this.nextElementSibling.remove(error);
+        }
     } else {
-        mess = "L'email est incorrect";
-        document.getElementById('errorp2').innerHTML = mess;
         // rouge
-        this.style.borderColor = 'red';       
+        this.style.borderColor = 'red';
+        if (this.nextSibling.length) {
+            this.after(error);
+        }
+             
     }
 }
 function verifPseudo() {
