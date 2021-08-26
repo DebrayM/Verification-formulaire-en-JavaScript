@@ -40,15 +40,17 @@ function affichPassword2() {
         passw2.type ="password";
     }
 }
-
-function emailIsValid (email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-  }
+// Expression régulière permettant la vérification syntaxique d'une adresse email
+function checkEmail(email)
+{
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
 
 function verifEmail() {
     console.log("email " + this.id + "  valeur  " + this.value);
 
-    if (emailIsValid(this.value)) {
+    if (checkEmail(this.value)) {
         this.style.borderColor = "green";
         document.getElementById('errorp2').innerHTML = "";
     } else {
